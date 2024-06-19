@@ -1,0 +1,11 @@
+@import './../../../../styles.scss';
+
+section {
+    width: calc(100% - 50px);
+    height: 143px;
+    position: absolute;
+    top: 0;
+    margin: 0 25px;
+    @include display($jc: space-between);
+
+}
