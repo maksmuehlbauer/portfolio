@@ -1,0 +1,19 @@
+<section>
+    <img src="./assets/img/my-projects/bubble-1.png" class="bubbles" [ngStyle]="{top: '44px', right: 'calc(82px - 22.5px)'}" alt="" >
+    <img src="./assets/img/my-projects/bubble-2.png" class="bubbles" [ngStyle]="{top: '210px', right: 'calc(24px)'}" alt="" >
+    <img src="./assets/img/my-projects/bubble-3.png" class="bubbles" [ngStyle]="{top: '402px', left: '0px'}" alt="" >
+    <img src="./assets/img/my-projects/bubble-4.png" class="bubbles" [ngStyle]="{top: '913px', right: '0px'}" alt="" >
+    <img src="./assets/img/my-projects/bubble-5.png" class="bubbles" [ngStyle]="{top: '1752px', right: 'calc(230px)'}" alt="" >
+    <img src="./assets/img/my-projects/bubble-6.png" class="bubbles" [ngStyle]="{top: '2481px', right: '25px', 'z-index': '1'}" alt="" >
+    <img src="./assets/img/my-projects/bubble-7.png" class="bubbles" [ngStyle]="{top: '3141px', right: '30px'}" alt="" >
+
+    <div>
+        <h1>My work</h1>
+        <p>Feel free to try out my latest development projects and look into their code. </p>
+    </div>
+
+    @for(singleProject of projectData.projectList; track singleProject.title) {
+        <app-single-project [project]="singleProject"></app-single-project>
+    }
+</section>
+

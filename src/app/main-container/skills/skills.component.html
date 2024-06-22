@@ -1,3 +1,25 @@
+<!-- <section>
+    <h1>Skill set</h1>
+    <div class="logo-container">
+        
+        @for (skill of skillsData.skillList; track skill.icon; let index = $index, let last = $last) {
+            <div id="{{ index }}">
+                <img  src="./assets/img/skills/{{ skill.icon }}" alt="">
+                <p>{{ skill.name }}</p>
+            </div>
+        }
+    </div>
+</section> -->
+
+
 <section>
-    
+    <h1>Skill set</h1>
+    <div class="logo-container">
+        <div *ngFor="let skill of skillsData.skillList; let index = index; let last = last" [ngClass]="{'last-element-class': last}" class="skill-container">
+            
+                <img src="./assets/img/skills/{{ skill.icon }}" alt="">
+                <p>{{ skill.name }}</p>
+            
+        </div>
+    </div>
 </section>

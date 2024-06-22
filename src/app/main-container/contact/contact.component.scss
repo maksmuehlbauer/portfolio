@@ -1,0 +1,104 @@
+@import './../../../styles.scss';
+
+section {
+    position: relative;
+    background-image: url(./../../../assets/img/contact/contact-bg.svg);
+    padding-bottom: 23px;
+    background-size: cover;
+}
+
+.text-container {
+    margin-left: 24px;
+    >h1 {
+        font-family: "Baloo 2", Arial, Helvetica, sans-serif;
+        font-weight: 900;
+        font-size: 45px;
+        margin: 39.5px 0 0 0;
+        line-height: 54px;
+        letter-spacing: 0;
+        color: $color-red;
+    }
+    >h2 {
+        font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+        font-weight: 700;
+        font-size: 23px;
+        margin: 35px 0 0 0;
+        line-height: 27.6px;
+        letter-spacing: 0;
+        color: $color-red;
+    }
+    >p {
+        font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19.2px;
+        margin: 21px 20px 0 0;
+    }
+    >span{
+        font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+        font-weight: 400;
+        color: $color-red;
+        margin: 21px 0 0 0;
+        display: block;
+        letter-spacing: -0.1px;
+        >span{
+            font-family: "Baloo 2", Arial, Helvetica, sans-serif;
+            font-size: 18px;
+            font-weight: 900;
+        }
+    }
+}
+
+.form-container {
+    @include display();
+    flex-direction: column;
+    margin: 35px 24px 0 26px;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    >form {
+        @include display();
+        flex-direction: column;
+        >input, textarea {
+            width: calc(100% - 50px);
+            margin: 0 0 28px 0;
+            border: 1px solid $color-red;
+            border-radius: 10px;
+            padding: 15px 25px;
+            background-color: $color-white;
+        }
+        ::placeholder {
+            font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+            font-size: 16px;
+            font-weight: 500;
+            color: $color-black;
+        }
+        >.txt-height {
+            height: 162px;
+        }
+    }
+}
+
+.confirm-container {
+    @include display();
+    gap: 8px;
+    font-size: 14px;
+    >span{
+        >span{
+            color: $color-red;
+        }
+    }
+}
+
+.bubbles {
+    position: absolute;
+}
+
+.zindex {
+    z-index: -1;
+}
+
+.m-bot {
+    margin-bottom: 36px;
+}
+
+
+

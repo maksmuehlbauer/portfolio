@@ -6,6 +6,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; box-sizing:
 
 $color-white: white;
 $color-red: #FF5959;
+$color-black: black;
 
 .font-baloo {
     font-family: 'Baloo 2';
@@ -30,8 +31,11 @@ $color-red: #FF5959;
   border-radius: 10px;
   padding: 13px 24px;
   color: $color-red; 
-  margin: 34px 0 49px 0;       
+  margin: 34px 0 49px 0;    
+  text-decoration: none;  
+  filter: drop-shadow(0px 2px 4px rgba(0,0,0,0.2)); 
 }
+
 
 
 /* baloo-2-regular - latin */

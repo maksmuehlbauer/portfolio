@@ -1,0 +1,24 @@
+<section>
+    <div class="text-container">
+        <h1>Contact </h1>
+        <h2>Got a problem to solve?</h2>
+        <p>Contact me through this form, I am interested in hearing from you, knowing your ideas and contributing to your projects with my work.</p>
+        <span>Need a Frontend developer? <span>Contact me!</span></span>
+    </div>
+    <div class="form-container">
+        <form (submit)="onSubmit($event)">
+            <input type="text" placeholder="Your name">
+            <input type="email" placeholder="Your email">
+            <textarea class="txt-height" placeholder="Your message"></textarea>
+            <div class="confirm-container">
+                <input type="checkbox">
+                <span>I've read the <span>privacy policy</span> and agree to the processing of my data as outlined.</span>
+            </div>
+            <button (click)="checkbutton()" class="button-large m-bot" [disabled]="isDisabled">Say hello ;-)</button>
+        </form>
+    </div>
+    <img src="./assets/img/contact/bubble-1.png" alt="" class="bubbles" [ngStyle]="{bottom: '49px', right: '25px'}">
+    <img src="./assets/img/contact/bubble-2.png" alt="" class="bubbles zindex" [ngStyle]="{top: '372px', left: '113px'}">
+    <a class="button-top" (click)="scrollToTop()"><img src="./assets/img/contact/to-top.png" alt="" class="bubbles" [ngStyle]="{bottom: '30px', left: '24px'}"></a>
+
+</section>
