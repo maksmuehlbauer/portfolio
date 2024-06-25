@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 
+
 @Component({
   selector: 'app-header',
   standalone: true,
@@ -9,4 +10,17 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
 
+  openMenu: boolean = false;
+
+  openSideMenu() {
+    if(!this.openMenu) {
+      this.openMenu = true;
+      console.log('true')
+    } else {
+      this.openMenu = false;
+      console.log('false')
+    }
+    
+
+  };
 }

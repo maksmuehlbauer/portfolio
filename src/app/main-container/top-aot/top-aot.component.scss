@@ -20,7 +20,7 @@ section {
 }
 
 .text-container {
-    margin: 143px 0 0 18px;
+    padding: 143px 0 0 18px;
     color: $color-white;
     
     h1 {
@@ -39,6 +39,108 @@ section {
         letter-spacing: -4px;
         >span {
             font-size: 69px;
+        }
+    }
+}
+
+.desktop-content-container {
+    display: none;
+}
+
+@media (min-width: 1440px) {
+
+    section {
+        background-image: url(./../../../assets/img/top-aot/desktop-bg.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 1028px;
+        overflow: hidden;
+        position: relative;
+
+        .character-img {
+            margin-top: 200px;
+            // position: absolute;
+            // bottom: 0;
+            // left: 136px;
+            width: 50%;
+
+        }
+
+        .big-bubble {
+            display: none;
+        }
+
+        .medium-bubble {
+            position: absolute;
+            top: 925px;
+            left: 628px;
+            width: 206px;
+            object-fit: cover;
+        }
+
+        .content-container {
+            @include display();
+            gap: 50px;
+            flex-direction: row-reverse;
+            margin: 0 96px;
+        }
+    }
+
+    .text-container {
+        padding: 0;
+        color: $color-red;
+        width: 50%;
+        margin: 0 0 308px 0;
+        h1 {
+            font-size: 61px;
+            padding-bottom: 12px
+        }
+        h2 {
+            margin: 17px 0 0 0;
+            font-size: 128px;
+            >span {
+                font-size: 118px;
+                margin: 37px 0 10px 0px;
+                display: block;
+            }
+        }
+    }
+
+    .desktop-content-container {
+        position: absolute;
+        bottom: 0;
+        right: 100px;
+        /* width: 25%; */
+        gap: 276px;
+        @include display($jc: space-between);
+        .d-gap {
+            gap: 35px;
+            >div {
+                margin-left: 20px;
+                transition: 250ms;
+                &:hover {
+                    cursor: pointer;
+                    margin-left: 0px;
+            }
+            }
+            
+        }
+        >div {
+            @include display();
+            flex-direction: column;
+            color: $color-red;
+            gap: 10px;
+            .desktop-pipe {
+                border: 1px solid red;
+                height: 330px;
+                background-color: #FF5959;
+              }
+            h3 {
+                font-size: 23px;
+                font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+                font-weight: 500;
+                text-transform: uppercase;
+            }
         }
     }
 }
