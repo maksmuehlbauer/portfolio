@@ -18,12 +18,43 @@ section {
         letter-spacing: 0;
         color: $color-red;
     }
-    p {
-        font-family: 'Montserrat', Arial, Helvetica, sans-serif;
-        font-weight: 400;
-        font-size: 23px;
-        line-height: 27.6px;
-        margin: 35px 20px 0 25px;
+    >div {
+        @include display();
+        flex-direction: column;
+        p {
+            font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+            font-weight: 400;
+            font-size: 23px;
+            line-height: 27.6px;
+            margin: 35px 20px 0 25px;
+        }
     }
+}
+
+@media (min-width: 1440px) {
+    section {
+        flex-direction: row;
+        align-items: flex-start;
+        margin: 190px 92px;
+        .small-bubble {
+            top: 1086px;
+            right: 324px;
+            
+        }
+        h1 {
+            font-size: 121px;
+            width: 50%;
+            display: block;
+            margin: 0;
+            line-height: 121px;
+        }
+        >div {
+            width: 50%;
+            p {
+                margin: 0;
+            }
+        }
+    }
+
 
 }
