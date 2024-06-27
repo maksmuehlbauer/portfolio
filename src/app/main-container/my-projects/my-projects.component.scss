@@ -1,5 +1,10 @@
 @import './../../../styles.scss';
 
+.single-project-section {
+    @include display();
+    flex-direction: column;
+}
+
 section {
     position: relative;
     // margin: 93px 0 0 0;
@@ -26,6 +31,60 @@ section {
         position: absolute;
     }
 
+    .desk-bubbles {
+        position: absolute;
+        display: none;
+    }
+
 
 }
 
+@media (min-width: 1440px) {
+
+
+    section {
+        margin: 0 100px;
+        >div {
+            width: 50%;
+            h1 {
+                font-size: 96px;
+                line-height: 96px;
+                margin: 0 0 0 0;
+            }
+            p {
+                font-size: 23px;
+                margin: 35px 0 102px 0;
+                line-height: 27.6px;
+            }
+        }
+        .bubbles {
+            display: none;
+        }
+    
+        .desk-bubbles {
+            display: block;
+        }
+    }
+
+    .single-project-section {
+        align-items: flex-end !important;
+        margin: 0 0 137px 0;
+    }
+
+    .bg-row {
+        // background-color: yellow;
+        display: flex;
+        flex-direction: row;
+        gap: 88px;
+
+    }
+
+    .bg-row-reverse {
+        // background-color: red;
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: start;
+        gap: 88px;
+
+    }
+}

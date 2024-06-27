@@ -24,6 +24,7 @@ export class PortfolioService {
 
   projectList = [
     {
+      id: 0,
       img: './assets/img/my-projects/join.png',
       title: 'Join',
       languages: 'Angular | TypeScript | HTML | CSS | Firebase',
@@ -31,7 +32,8 @@ export class PortfolioService {
       projecturl: 'https://max-muehlbauer.developerakademie.net/projects/join_group/index.html',
       githuburl: 'https://github.com/maksmuehlbauer/Join_Gruppenarbeit'
     },
-    {
+    { 
+      id: 1,
       img: './assets/img/my-projects/elpolloloco.png',
       title: 'Pollo Loco',
       languages: 'JavaScript | HTML | CSS',
@@ -40,6 +42,7 @@ export class PortfolioService {
       githuburl: 'https://github.com/maksmuehlbauer/el-pollo-loco'
     },
     {
+      id: 2,
       img: './assets/img/my-projects/crm.png',
       title: 'Simple CRM',
       languages: 'Angular | Firebase',
@@ -48,6 +51,7 @@ export class PortfolioService {
       githuburl: 'https://www.bild.de'
     },
     {
+      id: 3,
       img: './assets/img/my-projects/pokedex.png',
       title: 'Pokédex',
       languages: 'JavaScript | HTML | CSS | Api ',
@@ -56,6 +60,7 @@ export class PortfolioService {
       githuburl: 'https://www.bild.de'
     },
     {
+      id: 4,
       img: './assets/img/my-projects/crypto.png',
       title: 'Crypto Converter',
       languages: 'Angular | TypeScript | RestAPI | HTML | CSS',

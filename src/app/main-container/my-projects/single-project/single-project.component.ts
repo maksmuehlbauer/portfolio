@@ -1,9 +1,10 @@
 import { Component, Input, inject } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-single-project',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './single-project.component.html',
   styleUrl: './single-project.component.scss'
 })
@@ -11,6 +12,7 @@ export class SingleProjectComponent {
 
 
   @Input()project = {
+    id: 0,
     img: './assets/img/my-projects/join.png',
     title: 'GG',
     languages: 'Angular | TypeScript | HTML | CSS | Firebase',
@@ -18,4 +20,17 @@ export class SingleProjectComponent {
     projecturl: 'www.google.de',
     githuburl: 'www.bild.de'
   }
+
+  // textDirection(index: number): string {
+  //   if (index % 2 === 0) {
+  //     return 'text-content-left'
+  //   } else {
+  //     return 'text-content-right'
+  //   }
+  // }
+
+  textDirection(index: number): string {
+    return index % 2 === 0 ? 'text-content-left' : 'text-content-right';
+  }
+
 }

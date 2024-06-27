@@ -59,9 +59,15 @@ section {
         width: 80px;
         object-fit: cover;
         gap: 10px;
+        &:hover {
+            cursor: pointer;
+        }
         >img {
             height: 75px;
             object-fit: cover;
+        }
+        p {
+            font-size: 16px;
         }
     }
 
