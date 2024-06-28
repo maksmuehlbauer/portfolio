@@ -1,16 +1,19 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatIconModule} from '@angular/material/icon';
+import {MatInputModule} from '@angular/material/input';
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, MatFormFieldModule, MatIconModule, MatInputModule],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss'
 })
 export class ContactComponent {
 
-  isDisabled: boolean = false;
+  isDisabled: boolean = true;
 
   onSubmit(event: Event){
     event.preventDefault();

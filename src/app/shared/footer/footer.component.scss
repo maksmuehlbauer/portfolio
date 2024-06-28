@@ -45,6 +45,9 @@ section {
 }
 
 @media (min-width: 1440px) {
+    section {
+        padding: 105px 0 85px 0;
+    }
 
     .footer-container {
         flex-direction: row;

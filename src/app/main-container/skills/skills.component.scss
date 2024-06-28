@@ -59,12 +59,20 @@ section {
         width: 80px;
         object-fit: cover;
         gap: 10px;
+        transition: all 125ms ;
         &:hover {
-            cursor: pointer;
+            font-weight: 600;
+            >img {
+                transform: translateY(0px);
+                &:hover {
+                    transform: translateY(-12px);
+                }
+            }
         }
         >img {
             height: 75px;
             object-fit: cover;
+            transition: all 125ms ;
         }
         p {
             font-size: 16px;

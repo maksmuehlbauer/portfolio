@@ -8,9 +8,20 @@
     </div>
     <div class="form-container">
         <form (submit)="onSubmit($event)">
-            <input type="text" placeholder="Your name">
-            <input type="email" placeholder="Your email">
-            <textarea class="txt-height" placeholder="Your message"></textarea>
+            <div class="input-container">
+                <input type="text" id="name" placeholder="" required>
+                <label for="name">Your name</label>
+            </div>
+            <div class="input-container">
+                <input type="email" id="mail" placeholder="" required>
+                <label for="mail">Your email</label>
+            </div>
+            <div class="input-container">
+                <textarea type="text" id="text" placeholder=""></textarea>
+                <label for="text">Your message</label>
+            </div>
+            
+
             <div class="confirm-container">
                 <input type="checkbox">
                 <span>I've read the <span>privacy policy</span> and agree to the processing of my data as outlined.</span>
