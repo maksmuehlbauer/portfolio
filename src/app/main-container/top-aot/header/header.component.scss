@@ -84,10 +84,14 @@ section {
 
     .desktop-menu-points {
         @include display();
+    
         >div {
-            @include display($ai: flex-start);
-            gap: 29px;
+            // @include display($ai: flex-start);
+            @include display($flex: grid);
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 22px;
             >a {
+                width: 130px;
                 color: $color-red;
                 font-family: 'Montserrat', Arial, Helvetica, sans-serif;
                 font-weight: 400;
@@ -96,7 +100,6 @@ section {
                 margin: 0 20px 0 25px;
                 text-decoration: none;
                     &:hover {
-                        transform-origin: left center;
                         font-weight: bold;
                 }
             }
