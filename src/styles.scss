@@ -8,6 +8,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; box-sizing:
 $color-white: white;
 $color-red: #FF5959;
 $color-black: black;
+$color-disabled: #BBBBBB;
 
 .font-baloo {
     font-family: 'Baloo 2';
@@ -45,8 +46,12 @@ $color-black: black;
   }
 }
 
-.desktop-button-margin {
-  margin: 34px 0 8px 0;  
+
+
+@media (min-width:1440px) {
+  .desktop-button-margin {
+    margin: 34px 0 8px 0;  
+  }
 }
 
 

@@ -9,24 +9,37 @@
     <div class="form-container">
         <form (submit)="onSubmit($event)">
             <div class="input-container">
-                <input type="text" id="name" placeholder="" required>
+                <input [(ngModel)]="inputDataName" (keyup)="checkInputName()" name="username" type="text" id="name" placeholder="" required>
+                
                 <label for="name">Your name</label>
+                <img src="{{ namePath }}" alt="" [class.d-none]="NameIsEmpty">
+                <p [class.d-none]="NameInfo">Your name is required</p>
+                
             </div>
             <div class="input-container">
-                <input type="email" id="mail" placeholder="" required>
+                <input [(ngModel)]="inputDataMail" (keyup)="checkInputMail()" name="usermail" type="text" id="mail" placeholder="" required>
                 <label for="mail">Your email</label>
+                <img src="{{ mailPath }}" alt="" [class.d-none]="MailIsEmpty">
+                <p [class.d-none]="MailInfo">Your mail is required</p>
             </div>
             <div class="input-container">
-                <textarea type="text" id="text" placeholder=""></textarea>
+                <textarea [(ngModel)]="inputDataMessage" (keyup)="checkInputMessage()" name="usermessage" type="text" id="text" placeholder=""></textarea>
                 <label for="text">Your message</label>
+                <img src="{{ messagePath }}" alt="" [class.d-none]="messageIsEmpty">
+                <p [class.d-none]="messageInfo">Your messageis empty</p>
             </div>
             
 
             <div class="confirm-container">
-                <input type="checkbox">
+                <div class="checkbox-container" (click)="checkBoxState()">
+                    <img src="{{ checkboxPath }}" alt="">
+                    <input type="checkbox" id="checkbox" class="checkbox">
+                    <label for="checkbox"></label>
+                </div>
                 <span>I've read the <span>privacy policy</span> and agree to the processing of my data as outlined.</span>
             </div>
-            <button (click)="checkbutton()" class="button-large m-bot" [disabled]="isDisabled">Say hello ;-)</button>
+            <!-- <button (click)="checkbutton()" class="button-large m-bot desk-m-top" [disabled]="isDisabled">Say hello ;-)</button> -->
+            <button [ngClass]="btnState()" class="m-bot desk-m-top" [disabled]="isDisabled">Say hello ;-)</button>
         </form>
     </div>
     <img src="./assets/img/contact/bubble-1.png" alt="" class="bubbles" [ngStyle]="{bottom: '49px', right: '25px'}">

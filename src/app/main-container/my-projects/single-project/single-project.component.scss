@@ -1,9 +1,5 @@
 @import './../../../../styles.scss';
 
-// section {
-
-    
-// }
 
 img {
     margin: 72px 0 0 0;
@@ -46,9 +42,14 @@ img {
     gap: 50px;
     text-decoration: none;
     >.bg-color {
-        background-color: $color-red;
+        background-color: $color-red !important;
         color: $color-white;
+        background: none;
     }
+}
+
+.mobile-alignment{
+    @include display();
 }
 
 @media (min-width: 1440px) {
