@@ -13,6 +13,7 @@ section {
 }
 
 .text-container {
+    margin: 0 0 32px 0;
     >h1 {
         font-family: "Baloo 2", Arial, Helvetica, sans-serif;
         font-weight: 900;
@@ -58,6 +59,7 @@ section {
     @include display();
     flex-direction: column;
     font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+
     >form {
         @include display();
         flex-direction: column;
@@ -173,6 +175,7 @@ section {
     @include display();
     gap: 8px;
     font-size: 14px;
+    margin-top: 170px;
     >span{
         >span{
             color: $color-red;

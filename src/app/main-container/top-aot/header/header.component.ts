@@ -15,10 +15,8 @@ export class HeaderComponent {
   openSideMenu() {
     if(!this.openMenu) {
       this.openMenu = true;
-      console.log('true')
     } else {
       this.openMenu = false;
-      console.log('false')
     }
     
 

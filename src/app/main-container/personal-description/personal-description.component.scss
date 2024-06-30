@@ -3,9 +3,10 @@
 section {
     @include display();
     flex-direction: column;
+    position: relative;
     .small-bubble {
         position: absolute;
-        top: 886px;
+        top: 42px;
         right: 21px;
         
     }
@@ -37,7 +38,7 @@ section {
         align-items: flex-start;
         margin: 190px 92px;
         .small-bubble {
-            top: 1086px;
+            top: -132px;
             right: 324px;
             
         }
