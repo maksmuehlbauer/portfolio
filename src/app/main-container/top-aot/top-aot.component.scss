@@ -1,47 +1,60 @@
 @import './../../../styles.scss';
 
 section {
+    background: rgb(255,255,255);
+    background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,234,234,1) 100%);
+    
     .big-bubble {
         position: absolute;
         top: 0;
-        z-index: -1;
+        z-index: 0;
         width: 100%;
     }
     .medium-bubble {
         position: absolute;
         top: 762px;
         left: 107px;
+        z-index: 2;
     }
-    .character-img {
-        margin-top: -24px;
-        width: 103%;
-    }
+
 
 }
 
-.text-container {
-    padding: 143px 0 0 18px;
-    color: $color-white;
-    
-    h1 {
-        font-family: 'Montserrat', Arial, Helvetica, sans-serif;
-        font-weight: 400;
-        font-size: 36px;
-        margin: 0;
+.content-container {
+    @include display();
+    flex-direction: column;
+    >.character-img {
+        margin-top: -24px;
+        width: 100%;
+        z-index: 1;
+        align-self: flex-end;
     }
-    h2 {
-        margin: 8px 0 0 0;
-        font-family: "Baloo 2", Arial, Helvetica, sans-serif;
-        font-weight: bold;
-        font-size: 73px;
-        text-transform: uppercase;
-        line-height: 65.6px;
-        letter-spacing: -4px;
-        >span {
-            font-size: 69px;
+    >.text-container {
+        padding: 143px 0 0 18px;
+        color: $color-white;
+        z-index: 1;
+        h1 {
+            font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+            font-weight: 400;
+            font-size: 36px;
+            margin: 0;
+        }
+        h2 {
+            margin: 8px 0 0 0;
+            font-family: "Baloo 2", Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            font-size: 73px;
+            text-transform: uppercase;
+            line-height: 65.6px;
+            letter-spacing: -4px;
+            >span {
+                font-size: 69px;
+            }
         }
     }
 }
+
+
 
 .desktop-content-container {
     display: none;
@@ -53,16 +66,18 @@ section {
         background-image: url(./../../../assets/img/top-aot/desktop-bg.png);
         background-repeat: no-repeat;
         background-size: cover;
-        height: 1028px;
+        height: 968px;
         // overflow: hidden;
         position: relative;
 
+
         .character-img {
-            margin-top: 212px;
-            // position: absolute;
-            // bottom: 0;
-            // left: 136px;
+            margin-top: 0;
+            align-self: flex-end;
             width: 50%;
+            max-width: 830px;
+            max-height: 930px;
+            object-fit: cover;
 
         }
 
@@ -72,7 +87,7 @@ section {
 
         .medium-bubble {
             position: absolute;
-            top: 925px;
+            top: 865px;
             left: 628px;
             width: 206px;
             object-fit: cover;
@@ -83,28 +98,30 @@ section {
             gap: 50px;
             flex-direction: row-reverse;
             margin: 0 96px;
-        }
-    }
-
-    .text-container {
-        padding: 0;
-        color: $color-red;
-        width: 50%;
-        margin: 0 0 308px 0;
-        h1 {
-            font-size: 61px;
-            padding-bottom: 12px
-        }
-        h2 {
-            margin: 17px 0 0 0;
-            font-size: 128px;
-            >span {
-                font-size: 118px;
-                margin: 37px 0 10px 0px;
-                display: block;
+            height: 100%;
+            >    .text-container {
+                padding: 0;
+                color: $color-red;
+                width: 50%;
+                margin: 0 0 308px 0;
+                h1 {
+                    font-size: 61px;
+                    padding-bottom: 12px
+                }
+                h2 {
+                    margin: 17px 0 0 0;
+                    font-size: 128px;
+                    >span {
+                        font-size: 118px;
+                        margin: 37px 0 10px 0px;
+                        display: block;
+                    }
+                }
             }
         }
     }
+
+
 
     .desktop-content-container {
         position: absolute;

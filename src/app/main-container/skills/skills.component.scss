@@ -19,7 +19,8 @@ section {
 }
 
 .logo-container {
-    @include display($jc: space-between);
+    @include display($flex: grid, $jc: space-between);
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 40px;
     row-gap: 17px;
     padding: 35px 0 43px 0;
@@ -33,11 +34,16 @@ section {
     color: $color-white;
     // background-color: aquamarine;
     flex: 1;
+    gap: 10px;
     >p {
         font-size: 14px;
         font-family: "Montserrat", Arial, Helvetica, sans-serif;
         text-align: center;
     }
+}
+
+.last-element-class {
+    grid-column-start: 2;
 }
 
 @media (min-width: 1440px) {
@@ -48,6 +54,7 @@ section {
     }
 
     .logo-container {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
         margin: 0 242px;
         row-gap: 48px;
         column-gap: 131px;
@@ -77,6 +84,10 @@ section {
         p {
             font-size: 16px;
         }
+    }
+
+    .last-element-class {
+        grid-column-start: auto;
     }
 
 }
