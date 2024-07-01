@@ -57,7 +57,7 @@ export class PortfolioService {
       languages: 'JavaScript | HTML | CSS | Api ',
       description: 'Based on the PokéAPI a simple library that provides and catalogues pokemon information.',
       projecturl: 'https://max-muehlbauer.developerakademie.net/projects/pokedex/index.html',
-      githuburl: 'https://www.bild.de'
+      githuburl: 'https://github.com/maksmuehlbauer/Pokedex-v1'
     },
     {
       id: 4,

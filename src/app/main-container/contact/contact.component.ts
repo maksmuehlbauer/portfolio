@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, NgForm } from '@angular/forms';
 import { MsgSendSuccComponent } from './msg-send-succ/msg-send-succ.component';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-contact',
@@ -12,20 +13,17 @@ import { MsgSendSuccComponent } from './msg-send-succ/msg-send-succ.component';
 })
 export class ContactComponent {
 
-  isDisabled: boolean = true;
+  isDisabled: boolean = false;
   visibleSucces: boolean = true;
 
-  inputDataName: string = '';
   NameIsEmpty: boolean = true
   NameInfo: boolean = true;
   namePath: string = '';
   
-  inputDataMail: string = '';
   MailIsEmpty: boolean = true
   MailInfo: boolean = true;
   mailPath: string = '';
 
-  inputDataMessage: string = '';
   messageIsEmpty: boolean = true
   messageInfo: boolean = true;
   messagePath: string = '';
@@ -33,37 +31,77 @@ export class ContactComponent {
   checkboxPath: string = './assets/img/contact/checkbox-empty.png'
   checkboxDefaultPath: string = './assets/img/contact/checkbox-empty.png'
 
-
-  onSubmit(event: Event){
-    event.preventDefault();
-    console.log('hallo')
-    this.visibleSucces = false;
-    setTimeout(() => {
-      this.visibleSucces = true;
-    }, 2000);
-    this.clearForm();
+  contactData = {
+    name: "",
+    email: "",
+    message: "",
   }
 
-  clearForm() {
-    this.inputDataName = '';
-    this.inputDataMail = '';
-    this.inputDataMessage = '';
-    this.checkboxPath = './assets/img/contact/checkbox-empty.png';
-    this.namePath = '';
-    this.mailPath = '';
-    this.messagePath = '';
-    }
 
-  checkAllFields() {
-    if (this.checkboxPath === './assets/img/contact/checkbox-check-hov.png' && 
-      this.inputDataName.length > 0 &&
-      this.inputDataMail.length > 0 &&
-      this. inputDataMessage.length > 0) {
-        this.isDisabled = false;
-    } else {
-      this.isDisabled = true;
+  http = inject(HttpClient)
+
+  mailTest = true;
+
+  post = {
+    endPoint: 'https://deineDomain.de/sendMail.php',
+    body: (payload: any) => JSON.stringify(payload),
+    options: {
+      headers: {
+        'Content-Type': 'text/plain',
+        responseType: 'text',
+      },
+    },
+  };
+
+  onSubmit(ngForm: NgForm) {
+    if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
+      this.http.post(this.post.endPoint, this.post.body(this.contactData))
+        .subscribe({
+          next: (response) => {
+
+            ngForm.resetForm();
+          },
+          error: (error) => {
+            console.error(error);
+          },
+          complete: () => console.info('send post complete'),
+        });
+    } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
+
+      ngForm.resetForm();
     }
   }
+
+  // onSubmit(event: Event){
+  //   event.preventDefault();
+  //   console.log('hallo')
+  //   this.visibleSucces = false;
+  //   setTimeout(() => {
+  //     this.visibleSucces = true;
+  //   }, 2000);
+  //   this.clearForm();
+  // }
+
+  // clearForm() {
+  //   this.inputDataName = '';
+  //   this.inputDataMail = '';
+  //   this.inputDataMessage = '';
+  //   this.checkboxPath = './assets/img/contact/checkbox-empty.png';
+  //   this.namePath = '';
+  //   this.mailPath = '';
+  //   this.messagePath = '';
+  //   }
+
+  // checkAllFields() {
+  //   if (this.checkboxPath === './assets/img/contact/checkbox-check-hov.png' && 
+  //     this.contactData.name.length > 0 &&
+  //     this.contactData.email.length > 0 &&
+  //     this. contactData.message.length > 0) {
+  //       this.isDisabled = false;
+  //   } else {
+  //     this.isDisabled = true;
+  //   }
+  // }
 
 
   btnState() {
@@ -90,7 +128,7 @@ export class ContactComponent {
 
 
   checkInputName() {
-    if (this.inputDataName.length < 1) {
+    if (this.contactData.name.length < 1) {
       this.NameIsEmpty = false;
       this.NameInfo = false;
       this.namePath = './assets/img/contact/error.png'
@@ -102,7 +140,7 @@ export class ContactComponent {
   }
 
   checkInputMail() {
-    if (this.inputDataMail.length < 1) {
+    if (this.contactData.email.length < 1) {
       this.MailIsEmpty = false;
       this.MailInfo = false;
       this.mailPath = './assets/img/contact/error.png'
@@ -114,7 +152,7 @@ export class ContactComponent {
   }
 
   checkInputMessage() {
-    if (this.inputDataMessage.length < 1) {
+    if (this.contactData.message.length < 1) {
       this.messageIsEmpty = false;
       this.messageInfo = false;
       this.messagePath = './assets/img/contact/error.png'

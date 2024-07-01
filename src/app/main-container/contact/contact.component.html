@@ -7,31 +7,39 @@
         <span>Need a Frontend developer? <span>Contact me!</span></span>
     </div>
     <div class="form-container">
-        <form (submit)="onSubmit($event)">
+        <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
             <div class="input-container">
-                <input [(ngModel)]="inputDataName" (keyup)="checkInputName(); checkAllFields()" name="username" type="text" id="name" placeholder="" required>
-                
+                <input #name="ngModel" [(ngModel)]="contactData.name" (keyup)="checkInputName()" name="username" type="text" id="name" placeholder="" required>
                 <label for="name">Your name</label>
                 <img src="{{ namePath }}" alt="" [class.d-none]="NameIsEmpty">
-                <p [class.d-none]="NameInfo">Your name is required</p>
-                
+                <!-- <p [class.d-none]="NameInfo">Your name is required</p> -->
+                @if (!name.valid && name.touched) {
+                    <p>pls enter a name</p>
+                }
             </div>
+
             <div class="input-container">
-                <input [(ngModel)]="inputDataMail" (keyup)="checkInputMail(); checkAllFields()" name="usermail" type="text" id="mail" placeholder="" required>
+                <input #mail="ngModel" [(ngModel)]="contactData.email" (keyup)="checkInputMail()" name="usermail" type="email" id="mail" placeholder="" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
                 <label for="mail">Your email</label>
                 <img src="{{ mailPath }}" alt="" [class.d-none]="MailIsEmpty">
-                <p [class.d-none]="MailInfo">Your mail is required</p>
+                <!-- <p [class.d-none]="MailInfo">Your mail is required</p> -->
+                @if (!mail.valid && mail.touched) {
+                    <p>pls enter a mail</p>
+                }
             </div>
+
             <div class="input-container">
-                <textarea [(ngModel)]="inputDataMessage" (keyup)="checkInputMessage(); checkAllFields()" name="usermessage" type="text" id="text" placeholder="" required></textarea>
+                <textarea #message="ngModel" [(ngModel)]="contactData.message" (keyup)="checkInputMessage()" name="usermessage" type="text" id="text" placeholder="" required></textarea>
                 <label for="text">Your message</label>
                 <img src="{{ messagePath }}" alt="" [class.d-none]="messageIsEmpty">
-                <p [class.d-none]="messageInfo">Your messageis empty</p>
-            </div>
-            
+                <!-- <p [class.d-none]="messageInfo">Your message is empty</p> -->
+                @if (!message.valid && message.touched) {
+                    <p>pls enter a message</p>
+                }
+            </div>            
 
             <div class="confirm-container">
-                <div class="checkbox-container" (click)="checkBoxState(); checkAllFields()">
+                <div class="checkbox-container" (click)="checkBoxState()">
                     <img src="{{ checkboxPath }}" alt="">
                     <input type="checkbox" id="checkbox" class="checkbox">
                     <label for="checkbox"></label>
@@ -51,3 +59,4 @@
     <a class="button-top" (click)="scrollToTop()"><img src="./assets/img/contact/to-top.png" alt=""></a>
     <app-msg-send-succ [class.d-none]="visibleSucces"></app-msg-send-succ>
 </section>
+
