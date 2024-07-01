@@ -29,7 +29,7 @@
             </div>
 
             <div class="input-container">
-                <textarea #message="ngModel" [(ngModel)]="contactData.message" (keyup)="checkInputMessage()" name="usermessage" type="text" id="text" placeholder="" required></textarea>
+                <textarea #message="ngModel" [(ngModel)]="contactData.message" name="usermessage" type="text" id="text" placeholder="" required></textarea>
                 <label for="text">Your message</label>
                 <img src="{{ messagePath }}" alt="" [class.d-none]="messageIsEmpty">
                 <!-- <p [class.d-none]="messageInfo">Your message is empty</p> -->

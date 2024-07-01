@@ -58,7 +58,7 @@ export class ContactComponent {
       this.http.post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
           next: (response) => {
-            // console.log('hallo')
+            console.log('hallo')
             ngForm.resetForm();
           },
           error: (error) => {
@@ -151,17 +151,17 @@ export class ContactComponent {
     }
   }
 
-  checkInputMessage() {
-    if (this.contactData.message.length < 1) {
-      this.messageIsEmpty = false;
-      this.messageInfo = false;
-      this.messagePath = './assets/img/contact/error.png'
-    } else {
-      this.messageIsEmpty = false;
-      this.messageInfo = true;
-      this.messagePath = './assets/img/contact/done.png'
-    }
-  }
+  // checkInputMessage() {
+  //   if (this.contactData.message.length < 1) {
+  //     this.messageIsEmpty = false;
+  //     this.messageInfo = false;
+  //     this.messagePath = './assets/img/contact/error.png'
+  //   } else {
+  //     this.messageIsEmpty = false;
+  //     this.messageInfo = true;
+  //     this.messagePath = './assets/img/contact/done.png'
+  //   }
+  // }
 
 
 
