@@ -9,20 +9,30 @@
     <div class="form-container">
         <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
             <div class="input-container">
-                <input #name="ngModel" [(ngModel)]="contactData.name" (keyup)="checkInputName()" name="username" type="text" id="name" placeholder="" required>
+                <input #name="ngModel" [(ngModel)]="contactData.name" name="username" type="text" id="name" placeholder="" required>
                 <label for="name">Your name</label>
-                <img src="{{ namePath }}" alt="" [class.d-none]="NameIsEmpty">
-                <!-- <p [class.d-none]="NameInfo">Your name is required</p> -->
+                @if (name.touched) {
+                    @if (contactData.name.length < 1) {
+                        <img src="./assets/img/contact/error.png" alt="">
+                    } @else {
+                        <img src="./assets/img/contact/done.png" alt="">
+                    }
+                } 
                 @if (!name.valid && name.touched) {
                     <p>pls enter a name</p>
                 }
             </div>
 
             <div class="input-container">
-                <input #mail="ngModel" [(ngModel)]="contactData.email" (keyup)="checkInputMail()" name="usermail" type="email" id="mail" placeholder="" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
+                <input #mail="ngModel" [(ngModel)]="contactData.email" name="usermail" type="email" id="mail" placeholder="" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
                 <label for="mail">Your email</label>
-                <img src="{{ mailPath }}" alt="" [class.d-none]="MailIsEmpty">
-                <!-- <p [class.d-none]="MailInfo">Your mail is required</p> -->
+                @if (mail.touched) {
+                    @if (contactData.email.length < 1) {
+                        <img src="./assets/img/contact/error.png" alt="">
+                    } @else {
+                        <img src="./assets/img/contact/done.png" alt="">
+                    }
+                } 
                 @if (!mail.valid && mail.touched) {
                     <p>pls enter a mail</p>
                 }
@@ -31,23 +41,27 @@
             <div class="input-container">
                 <textarea #message="ngModel" [(ngModel)]="contactData.message" name="usermessage" type="text" id="text" placeholder="" required></textarea>
                 <label for="text">Your message</label>
-                <img src="{{ messagePath }}" alt="" [class.d-none]="messageIsEmpty">
-                <!-- <p [class.d-none]="messageInfo">Your message is empty</p> -->
+                @if (message.touched) {
+                    @if (contactData.message.length < 1) {
+                        <img src="./assets/img/contact/error.png" alt="">
+                    } @else {
+                        <img src="./assets/img/contact/done.png" alt="">
+                    }
+                } 
                 @if (!message.valid && message.touched) {
                     <p>pls enter a message</p>
                 }
             </div>            
 
             <div class="confirm-container">
-                <div class="checkbox-container" (click)="checkBoxState()">
+                <div class="checkbox-container" (click)="checkBoxState(); checkAllFields()">
                     <img src="{{ checkboxPath }}" alt="">
                     <input type="checkbox" id="checkbox" class="checkbox">
                     <label for="checkbox"></label>
                 </div>
                 <span>I've read the <span>privacy policy</span> and agree to the processing of my data as outlined.</span>
             </div>
-            <!-- <button (click)="checkbutton()" class="button-large m-bot desk-m-top" [disabled]="isDisabled">Say hello ;-)</button> -->
-            <button [ngClass]="btnState()" class="m-bot desk-m-top" [disabled]="isDisabled">Say hello ;-)</button>
+               <button [ngClass]="btnState()" (click)="clearForm()" class="m-bot desk-m-top" [disabled]="isDisabled">Say hello ;-)</button>
         </form>
     </div>
     <img src="./assets/img/contact/bubble-1.png" alt="" class="bubbles" [ngStyle]="{bottom: '49px', right: '25px'}">

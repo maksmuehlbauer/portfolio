@@ -13,20 +13,20 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ContactComponent {
 
-  isDisabled: boolean = false;
+  isDisabled: boolean = true;
   visibleSucces: boolean = true;
 
-  NameIsEmpty: boolean = true
-  NameInfo: boolean = true;
-  namePath: string = '';
+  // NameIsEmpty: boolean = true
+  // NameInfo: boolean = true;
+  // namePath: string = '';
   
-  MailIsEmpty: boolean = true
-  MailInfo: boolean = true;
-  mailPath: string = '';
+  // MailIsEmpty: boolean = true
+  // MailInfo: boolean = true;
+  // mailPath: string = '';
 
-  messageIsEmpty: boolean = true
-  messageInfo: boolean = true;
-  messagePath: string = '';
+  // messageIsEmpty: boolean = true
+  // messageInfo: boolean = true;
+  // messagePath: string = '';
 
   checkboxPath: string = './assets/img/contact/checkbox-empty.png'
   checkboxDefaultPath: string = './assets/img/contact/checkbox-empty.png'
@@ -82,26 +82,22 @@ export class ContactComponent {
   //   this.clearForm();
   // }
 
-  // clearForm() {
-  //   this.inputDataName = '';
-  //   this.inputDataMail = '';
-  //   this.inputDataMessage = '';
-  //   this.checkboxPath = './assets/img/contact/checkbox-empty.png';
-  //   this.namePath = '';
-  //   this.mailPath = '';
-  //   this.messagePath = '';
-  //   }
+  clearForm() {
 
-  // checkAllFields() {
-  //   if (this.checkboxPath === './assets/img/contact/checkbox-check-hov.png' && 
-  //     this.contactData.name.length > 0 &&
-  //     this.contactData.email.length > 0 &&
-  //     this. contactData.message.length > 0) {
-  //       this.isDisabled = false;
-  //   } else {
-  //     this.isDisabled = true;
-  //   }
-  // }
+    this.checkboxPath = './assets/img/contact/checkbox-empty.png';
+
+    }
+
+  checkAllFields() {
+    if (this.checkboxPath === './assets/img/contact/checkbox-check-hov.png' && 
+      this.contactData.name.length > 0 &&
+      this.contactData.email.length > 0 &&
+      this. contactData.message.length > 0) {
+        this.isDisabled = false;
+    } else {
+      this.isDisabled = true;
+    }
+  }
 
 
   btnState() {
@@ -127,29 +123,29 @@ export class ContactComponent {
   }
 
 
-  checkInputName() {
-    if (this.contactData.name.length < 1) {
-      this.NameIsEmpty = false;
-      this.NameInfo = false;
-      this.namePath = './assets/img/contact/error.png'
-    } else {
-      this.NameIsEmpty = false;
-      this.NameInfo = true;
-      this.namePath = './assets/img/contact/done.png'
-    }
-  }
+  // checkInputName() {
+  //   if (this.contactData.name.length < 1) {
+  //     this.NameIsEmpty = false;
+  //     this.NameInfo = false;
+  //     this.namePath = './assets/img/contact/error.png'
+  //   } else {
+  //     this.NameIsEmpty = false;
+  //     this.NameInfo = true;
+  //     this.namePath = './assets/img/contact/done.png'
+  //   }
+  // }
 
-  checkInputMail() {
-    if (this.contactData.email.length < 1) {
-      this.MailIsEmpty = false;
-      this.MailInfo = false;
-      this.mailPath = './assets/img/contact/error.png'
-    } else {
-      this.MailIsEmpty = false;
-      this.MailInfo = true;
-      this.mailPath = './assets/img/contact/done.png'
-    }
-  }
+  // checkInputMail() {
+  //   if (this.contactData.email.length < 1) {
+  //     this.MailIsEmpty = false;
+  //     this.MailInfo = false;
+  //     this.mailPath = './assets/img/contact/error.png'
+  //   } else {
+  //     this.MailIsEmpty = false;
+  //     this.MailInfo = true;
+  //     this.mailPath = './assets/img/contact/done.png'
+  //   }
+  // }
 
   // checkInputMessage() {
   //   if (this.contactData.message.length < 1) {

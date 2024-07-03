@@ -27,7 +27,7 @@ export class PortfolioService {
       id: 0,
       img: './assets/img/my-projects/join.png',
       title: 'Join',
-      languages: 'Angular | TypeScript | HTML | CSS | Firebase',
+      languages: 'Angular | TypeScript | HTML | CSS',
       description: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
       projecturl: 'https://max-muehlbauer.developerakademie.net/projects/join_group/index.html',
       githuburl: 'https://github.com/maksmuehlbauer/Join_Gruppenarbeit'
@@ -41,17 +41,17 @@ export class PortfolioService {
       projecturl: 'https://max-muehlbauer.developerakademie.net/projects/polloloco/index.html#',
       githuburl: 'https://github.com/maksmuehlbauer/el-pollo-loco'
     },
+    // {
+    //   id: 2,
+    //   img: './assets/img/my-projects/crm.png',
+    //   title: 'Simple CRM',
+    //   languages: 'Angular | Firebase',
+    //   description: 'A very Simple Customer Relationship Management system working with CRUD functionality.',
+    //   projecturl: 'https://www.google.de',
+    //   githuburl: 'https://www.google.de'
+    // },
     {
       id: 2,
-      img: './assets/img/my-projects/crm.png',
-      title: 'Simple CRM',
-      languages: 'Angular | Firebase',
-      description: 'A very Simple Customer Relationship Management system working with CRUD functionality.',
-      projecturl: 'https://www.google.de',
-      githuburl: 'https://www.bild.de'
-    },
-    {
-      id: 3,
       img: './assets/img/my-projects/pokedex.png',
       title: 'Pokédex',
       languages: 'JavaScript | HTML | CSS | Api ',
@@ -59,14 +59,14 @@ export class PortfolioService {
       projecturl: 'https://max-muehlbauer.developerakademie.net/projects/pokedex/index.html',
       githuburl: 'https://github.com/maksmuehlbauer/Pokedex-v1'
     },
-    {
-      id: 4,
-      img: './assets/img/my-projects/crypto.png',
-      title: 'Crypto Converter',
-      languages: 'Angular | TypeScript | RestAPI | HTML | CSS',
-      description: 'Simple currency converter based on a public API displaying exchange rate charts.',
-      projecturl: 'https://www.google.de',
-      githuburl: 'https://www.bild.de'
-    }
+    // {
+    //   id: 4,
+    //   img: './assets/img/my-projects/crypto.png',
+    //   title: 'Crypto Converter',
+    //   languages: 'Angular | TypeScript | RestAPI | HTML | CSS',
+    //   description: 'Simple currency converter based on a public API displaying exchange rate charts.',
+    //   projecturl: 'https://www.google.de',
+    //   githuburl: 'https://www.google.de'
+    // }
   ]
 }

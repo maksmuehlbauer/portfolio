@@ -18,7 +18,7 @@ section {
     position: absolute;
     display: block;
     overflow: hidden;
-    z-index: 5; // 5
+    z-index: -225; // 5
 }
 
 .menu {
@@ -61,9 +61,21 @@ section {
     display: none;
 }
 
+@media (max-width: 380px) {
+    section {
+        height: 112px;
+
+    }
+}
+
 @media (min-width: 768px){
     .menu {
         transform: translateX(1440px);
+    }
+    section {
+        width: calc(100% - 80px);
+        margin: 0 40px;
+
     }
 }
 
