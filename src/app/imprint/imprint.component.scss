@@ -3,20 +3,61 @@
 section {
     @include display($ai: flex-start);
     flex-direction: column;
-    padding: 128px 0 0 24px;
-
+    padding: 172px 32px;
+    color: $color-red;
+    a{
+        text-decoration: none;
+        color: $color-red;
+    }
+    >.bubble {
+        position: absolute;
+        top: -64px;
+        left: -64px;
+        transform: scale(1.5);
+        transform-origin: top left;
+    }
 }
 
 h1 {
     font-family: 'Baloo 2', Arial, Helvetica, sans-serif;
     font-size: 48px;
-    color: $color-red;
 }
 
 h2{
     font-family: 'Montserrat', Arial, Helvetica, sans-serif;
     font-weight: 400;
     font-size: 16px;
-    color: $color-red;
+    
     line-height: 22px;
+}
+
+@media (min-width: 1024px) {
+    section {
+        padding: 172px 40px;
+    }
+}
+
+@media (min-width: 768px) {
+    section {
+        padding: 200px 120px 0 40px;
+    }
+}
+
+@media (min-width: 1440px) {
+    section {
+        padding: 200px 120px 0 100px;
+        >.bubble {
+            position: absolute;
+            top: -64px;
+            left: -56px;
+            transform: scale(1.7);
+            transform-origin: top left;
+        }
+    }
+}
+
+@media (min-width: 1800px) {
+    section {
+        padding: 240px 280px 0 100px;
+    }
 }

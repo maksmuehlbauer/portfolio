@@ -6,7 +6,7 @@ section {
     height: 100vh;
     display: flex;
     position: relative;
-    overflow: hidden;
+    // overflow: hidden;
     .big-bubble {
         position: absolute;
         top: 0;
@@ -76,6 +76,8 @@ section {
     .character-img {
         max-width: 563px;
         object-fit: cover;
+        transform: scale(1.2);
+        transform-origin: bottom center;
     }
 
     h2 {
@@ -87,9 +89,32 @@ section {
             font-size: 92px !important;
         }
     }
+
+    .big-bubble {
+        width: 85% !important;
+    }
 }
 
 
+@media (min-width: 1000px) {
+    h1 {
+        font-size: 48px !important;
+        padding-bottom: 12px
+    }
+    h2 {
+        margin: 17px 0 0 0;
+        font-size: 128px !important;
+        line-height: 106.6px !important;
+        >span {
+            font-size: 118px !important;
+            margin: 37px 0 10px 0px !important;
+        }
+    }
+    .character-img {
+        transform: scale(1.4);
+        transform-origin: bottom center;
+    }
+}
 
 @media (min-width: 1440px) {
     section {
@@ -105,7 +130,8 @@ section {
             max-height: 930px;
             object-fit: cover;
             position: relative !important;
-
+            transform: scale(1.0) !important;
+            transform-origin: bottom center;
         }
 
         .big-bubble {
@@ -138,6 +164,7 @@ section {
                 h2 {
                     margin: 17px 0 0 0;
                     font-size: 128px !important;
+                    line-height: 65.6px !important;
                     >span {
                         font-size: 118px !important;
                         margin: 37px 0 10px 0px;
@@ -208,7 +235,7 @@ section {
     }
 }
 
-@media (min-width: 1600px) and (min-height:1150px) {
+@media (min-width: 1600px) and (min-height:900px) {
     .content-container {
         gap: 246px !important;
     }
@@ -224,6 +251,37 @@ section {
             font-size: 143px !important;
         }
     }   
+}
+
+@media (min-width: 2060px) and (min-height:1250px) {
+    .content-container {
+        gap: 500px !important;
+    }
+
+    .character-img {
+        margin-top: 0;
+        align-self: flex-end;
+        width: 50%;
+        max-width: 830px;
+        max-height: 930px;
+        object-fit: cover;
+        position: relative !important;
+        transform: scale(1.0) !important;
+        transform-origin: bottom center;
+    }
+
+    h1 {
+        font-size: 70px !important;
+    }
+
+    h2 {
+        font-size: 152px !important;
+        line-height: 75.6px !important;
+        >span {
+            font-size: 143px !important;
+        }
+    } 
+  
 }
 
 

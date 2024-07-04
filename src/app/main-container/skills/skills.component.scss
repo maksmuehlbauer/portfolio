@@ -33,12 +33,16 @@ section {
     flex-direction: column;
     color: $color-white;
     // background-color: aquamarine;
+
     flex: 1;
     gap: 10px;
     >p {
         font-size: 14px;
         font-family: "Montserrat", Arial, Helvetica, sans-serif;
         text-align: center;
+    }
+    >img {
+        height: 60px;
     }
 }
 
@@ -70,10 +74,7 @@ section {
         &:hover {
             font-weight: 600;
             >img {
-                transform: translateY(0px);
-                &:hover {
-                    transform: translateY(-12px);
-                }
+                transform: translateY(-21px);
             }
         }
         >img {
@@ -83,6 +84,7 @@ section {
         }
         p {
             font-size: 16px;
+            cursor: default;
         }
     }
 
