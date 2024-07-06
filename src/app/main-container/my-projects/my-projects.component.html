@@ -15,14 +15,17 @@
     <img src="./assets/img/my-projects/desk-bubble-6.png" class="desk-bubbles" [ngStyle]="{top: '1729px', left: '31px'}" alt="" >
     <img src="./assets/img/my-projects/desk-bubble-7.png" class="desk-bubbles" [ngStyle]="{top: '2337px', right: '30px', 'z-index': '-1'}" alt="" >
     <img src="./assets/img/my-projects/desk-bubble-8.png" class="desk-bubbles" [ngStyle]="{top: '2850px', left: '493px'}" alt="" >
-
-    <div>
-        <h1>My work</h1>
-        <p>Feel free to try out my latest development projects and look into their code. </p>qq
+    
+    <div class="wide-screen-container">
+        <div>
+            <h1>My work</h1>
+            <p>Feel free to try out my latest development projects and look into their code. </p>
+        </div>
+    
+        @for(singleProject of projectData.projectList; track singleProject.title; let index = $index) {
+            <app-single-project [project]="singleProject" id="{{ index }}" [ngClass]="getDirection(index)" class="single-project-section"></app-single-project>
+        }
     </div>
 
-    @for(singleProject of projectData.projectList; track singleProject.title; let index = $index) {
-        <app-single-project [project]="singleProject" id="{{ index }}" [ngClass]="getDirection(index)" class="single-project-section"></app-single-project>
-    }
 </section>
 

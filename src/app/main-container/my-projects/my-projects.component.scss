@@ -5,9 +5,9 @@
     flex-direction: column;
 }
 
-section {
-    position: relative;
-    // margin: 93px 0 0 0;
+.wide-screen-container {
+    @include display();
+    flex-direction: column;
     >div {
         padding-top: 93px;
         >h1 {
@@ -27,6 +27,14 @@ section {
             margin: 0 20px 0 25px;
         }
     }
+}
+
+
+section {
+    position: relative;
+    @include display();
+    // margin: 93px 0 0 0;
+    
     .bubbles {
         position: absolute;
     }
@@ -40,12 +48,11 @@ section {
 }
 
 @media (min-width: 1440px) {
+    .wide-screen-container {
 
-
-    section {
-        margin: 0 100px;
         >div {
-            width: 50%;
+            align-self: flex-start;
+            max-width: 1440px;
             h1 {
                 font-size: 96px;
                 line-height: 96px;
@@ -57,6 +64,11 @@ section {
                 line-height: 27.6px;
             }
         }
+    }
+
+    section {
+        margin: 0 100px;
+
         .bubbles {
             display: none;
         }
@@ -69,6 +81,7 @@ section {
     .single-project-section {
         align-items: flex-end !important;
         margin: 0 0 137px 0;
+        max-width: 1440px;
     }
 
     .bg-row {

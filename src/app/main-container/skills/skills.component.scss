@@ -1,11 +1,14 @@
 @import './../../../styles.scss';
 
-
-section {
-    width: 100%;
+.wide-screen-container {
+    @include display();
     background-image: url(./../../../assets/img/skills/background.svg);
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+section {
+    width: 100%;
     padding-top: 50px;
     h1 {
         font-family: "Baloo 2", Arial, Helvetica, sans-serif;
@@ -32,8 +35,6 @@ section {
     @include display($jc: space-between);
     flex-direction: column;
     color: $color-white;
-    // background-color: aquamarine;
-
     flex: 1;
     gap: 10px;
     >p {
@@ -51,7 +52,9 @@ section {
 }
 
 @media (min-width: 1440px) {
+
     section{
+        max-width: 1440px;
         h1 {
             font-size: 96px;
         }
@@ -59,7 +62,7 @@ section {
 
     .logo-container {
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-        margin: 0 242px;
+        // margin: 0 242px;
         row-gap: 48px;
         column-gap: 131px;
         padding: 60px 0 100px 0;

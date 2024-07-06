@@ -15,14 +15,17 @@
     </div>
 
 </div>
-<section [class.d-none]="openMenu">
-    <img src="./assets/img/top-aot/logo.png" alt="logo" [class.d-none]="openMenu">
-    <img class="hide-btn" src="./assets/img/top-aot/burger-menu.png" alt="burger menu" (click)="openSideMenu()" [class.d-none]="openMenu">
-    <div class="desktop-menu-points">
-        <div>
-            <a href="#about-me">About me</a>
-            <a href="#skills">Skill set</a>
-            <a href="#my-projects">My work</a>
+<div class="wide-screen-container">
+    <section [class.d-none]="openMenu">
+        <img src="./assets/img/top-aot/logo.png" alt="logo" [class.d-none]="openMenu">
+        <img class="hide-btn" src="./assets/img/top-aot/burger-menu.png" alt="burger menu" (click)="openSideMenu()" [class.d-none]="openMenu">
+        <div class="desktop-menu-points">
+            <div>
+                <a href="#about-me">About me</a>
+                <a href="#skills">Skill set</a>
+                <a href="#my-projects">My work</a>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
+</div>
+

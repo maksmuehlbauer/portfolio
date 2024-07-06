@@ -1,9 +1,15 @@
 @import './../../../styles.scss';
 
+.wide-screen-container {
+    @include display();
+    
+}
+
 section {
     @include display();
     flex-direction: column;
     position: relative;
+    max-width: 1440px;
     .small-bubble {
         position: absolute;
         top: 42px;
