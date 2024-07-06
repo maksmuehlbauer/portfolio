@@ -6,51 +6,51 @@
         <p>Contact me through this form, I am interested in hearing from you, knowing your ideas and contributing to your projects with my work.</p>
         <span>Need a Frontend developer? <span>Contact me!</span></span>
     </div>
-    <div class="form-container">
+    <div class="form-container" (keyup)="checkAllFields()">
         <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
             <div class="input-container">
                 <input #name="ngModel" [(ngModel)]="contactData.name" name="username" type="text" id="name" placeholder="" required>
                 <label for="name">Your name</label>
-                @if (name.touched) {
-                    @if (contactData.name.length < 1) {
+                @if (name.dirty) {
+                    @if (contactData.name.length <= 1) {
                         <img src="./assets/img/contact/error.png" alt="">
-                    } @else {
+                        <p>please enter a name with a minimum of 2 characters</p>
+                    }@else {
                         <img src="./assets/img/contact/done.png" alt="">
                     }
-                } 
-                @if (!name.valid && name.touched) {
-                    <p>pls enter a name</p>
                 }
             </div>
 
-            <div class="input-container">
+            <div class="input-container" (keyup)="checkAllFields()">
                 <input #mail="ngModel" [(ngModel)]="contactData.email" name="usermail" type="email" id="mail" placeholder="" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
                 <label for="mail">Your email</label>
-                @if (mail.touched) {
-                    @if (contactData.email.length < 1) {
+                @if (mail.dirty) {
+                    @if (mail.errors?.['pattern']) {
                         <img src="./assets/img/contact/error.png" alt="">
-                    } @else {
+                        <p>please enter a valid email, example: mail&#64;mailer.com</p>
+                    }@else if (contactData.email.length > 0) {
                         <img src="./assets/img/contact/done.png" alt="">
+                    }@else if (mail.errors?.['required']) {
+                        <p>Mail Adress is required</p>
                     }
-                } 
-                @if (!mail.valid && mail.touched) {
-                    <p>pls enter a mail</p>
                 }
             </div>
 
-            <div class="input-container">
-                <textarea #message="ngModel" [(ngModel)]="contactData.message" name="usermessage" type="text" id="text" placeholder="" required></textarea>
+            <div class="input-container" (keyup)="checkAllFields()">
+                <textarea #message="ngModel" [(ngModel)]="contactData.message" minlength="10" name="usermessage" type="text" id="text" placeholder="" required></textarea>
                 <label for="text">Your message</label>
-                @if (message.touched) {
-                    @if (contactData.message.length < 1) {
+                @if (message.dirty) {
+                    @if (message.errors?.['minlength']) {
                         <img src="./assets/img/contact/error.png" alt="">
-                    } @else {
+                        <p>please enter a message with at least 10 characters</p>
+                    }@else if (contactData.message.length > 0) {
                         <img src="./assets/img/contact/done.png" alt="">
+                    }@else if (message.errors?.['required']) {
+                        <p>short message is required</p>
                     }
-                } 
-                @if (!message.valid && message.touched) {
-                    <p>pls enter a message</p>
                 }
+                
+
             </div>            
 
             <div class="confirm-container">

@@ -58,7 +58,6 @@ export class ContactComponent {
       this.http.post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
           next: (response) => {
-            console.log('hallo')
             ngForm.resetForm();
           },
           error: (error) => {
@@ -72,27 +71,18 @@ export class ContactComponent {
     }
   }
 
-  // onSubmit(event: Event){
-  //   event.preventDefault();
-  //   console.log('hallo')
-  //   this.visibleSucces = false;
-  //   setTimeout(() => {
-  //     this.visibleSucces = true;
-  //   }, 2000);
-  //   this.clearForm();
-  // }
 
   clearForm() {
-
     this.checkboxPath = './assets/img/contact/checkbox-empty.png';
-
     }
+
+
 
   checkAllFields() {
     if (this.checkboxPath === './assets/img/contact/checkbox-check-hov.png' && 
-      this.contactData.name.length > 0 &&
-      this.contactData.email.length > 0 &&
-      this. contactData.message.length > 0) {
+      this.contactData.name.length > 1 &&
+      this.contactData.email.length > 3 &&
+      this. contactData.message.length > 9) {
         this.isDisabled = false;
     } else {
       this.isDisabled = true;
