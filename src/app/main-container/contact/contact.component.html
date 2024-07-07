@@ -63,6 +63,7 @@
                 </div>
                    <button [ngClass]="btnState()" (click)="clearForm()" class="m-bot desk-m-top" [disabled]="isDisabled">Say hello ;-)</button>
             </form>
+            <a class="button-top" (click)="scrollToTop()"><img src="./assets/img/contact/to-top.png" alt=""></a>
         </div>
         <img src="./assets/img/contact/bubble-1.png" alt="" class="bubbles" [ngStyle]="{bottom: '49px', right: '25px'}">
         <img src="./assets/img/contact/bubble-2.png" alt="" class="bubbles zindex" [ngStyle]="{top: '372px', left: '113px'}">
@@ -70,7 +71,7 @@
         <img src="./assets/img/contact/desk-bubble-1.png" alt="" class="desk-bubbles" [ngStyle]="{bottom: '188px', left: '242px'}">
         <img src="./assets/img/contact/desk-bubble-2.png" alt="" class="desk-bubbles" [ngStyle]="{bottom: '68px', right: '91px'}">
     
-        <a class="button-top" (click)="scrollToTop()"><img src="./assets/img/contact/to-top.png" alt=""></a>
+        
         <app-msg-send-succ [class.d-none]="visibleSucces"></app-msg-send-succ>
     </section>
 </div>

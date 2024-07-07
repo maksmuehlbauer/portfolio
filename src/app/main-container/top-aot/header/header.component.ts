@@ -11,14 +11,27 @@ import { Component } from '@angular/core';
 export class HeaderComponent {
 
   openMenu: boolean = false;
+  scrollEnabled: boolean = true;
 
-  openSideMenu() {
+  toggleSideMenu() {
     if(!this.openMenu) {
       this.openMenu = true;
+      this.toggleScrolling();
     } else {
       this.openMenu = false;
+      this.toggleScrolling();
     }
-    
-
   };
+
+  
+  toggleScrolling() {
+    if (this.scrollEnabled) {
+        document.body.style.overflow = 'hidden';
+        this.scrollEnabled = false;
+    } else {
+        document.body.style.overflow = 'auto';
+        this.scrollEnabled = true;
+    }
+}
+
 }

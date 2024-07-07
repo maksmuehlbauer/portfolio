@@ -64,7 +64,7 @@ section {
     @include display();
     flex-direction: column;
     font-family: 'Montserrat', Arial, Helvetica, sans-serif;
-
+    position: relative;
     >form {
         @include display();
         flex-direction: column;
@@ -206,8 +206,8 @@ section {
 
 .button-top {
     position: absolute;
-    bottom: 30px;
-    left: 24px;
+    bottom: 16px;
+    left: 0;
 }
 
 .checkbox-container {
@@ -250,8 +250,8 @@ section {
     }
 
     .button-top {
-        bottom: 49px;
-        left: 100px;
+        bottom: 32px;
+        left: -19px;
         cursor: pointer;
     }
 

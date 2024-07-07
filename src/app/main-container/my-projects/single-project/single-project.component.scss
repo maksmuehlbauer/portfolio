@@ -54,9 +54,9 @@ img {
 
 @media (min-width: 1440px) {
 
-    .d-none {
-        display: none;
-    }
+    // .d-none {
+    //     display: none;
+    // }
 
     .text-content-left {
         @include display($ai: start);

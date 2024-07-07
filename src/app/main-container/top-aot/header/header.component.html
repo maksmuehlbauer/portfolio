@@ -2,14 +2,14 @@
     <div class="menu" [class.show-menu]="openMenu">
         <div class="sidebar-nav">
             <img src="./assets/img/top-aot/logo-menu-red.png" alt="logo">
-            <img src="./assets/img/top-aot/burger-menu.png" alt="burger menu" (click)="openSideMenu()">
+            <img src="./assets/img/top-aot/burger-menu.png" alt="burger menu" (click)="toggleSideMenu()">
         </div>
         <div class="menu-points">
             <div>
-                <a href="#about-me">About me</a>
-                <a href="#skills">Skill set</a>
-                <a href="#my-projects">My work</a>
-                <a href="#contact">Contact</a>
+                <a href="#about-me" (click)="toggleSideMenu()">About me</a>
+                <a href="#skills" (click)="toggleSideMenu()">Skill set</a>
+                <a href="#my-projects" (click)="toggleSideMenu()">My work</a>
+                <a href="#contact" (click)="toggleSideMenu()">Contact</a>
             </div>
         </div>
     </div>
@@ -18,7 +18,7 @@
 <div class="wide-screen-container">
     <section [class.d-none]="openMenu">
         <img src="./assets/img/top-aot/logo.png" alt="logo" [class.d-none]="openMenu">
-        <img class="hide-btn" src="./assets/img/top-aot/burger-menu.png" alt="burger menu" (click)="openSideMenu()" [class.d-none]="openMenu">
+        <img class="hide-btn" src="./assets/img/top-aot/burger-menu.png" alt="burger menu" (click)="toggleSideMenu()" [class.d-none]="openMenu">
         <div class="desktop-menu-points">
             <div>
                 <a href="#about-me">About me</a>
