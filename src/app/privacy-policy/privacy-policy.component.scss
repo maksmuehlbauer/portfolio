@@ -1,0 +1,70 @@
+@import './../../styles.scss';
+
+
+.wide-screen-container {
+    @include display();
+    flex-direction: column;
+    
+    color: $color-red;
+    
+    >div {
+        // z-index: 6;
+        max-width: 1440px;
+        position: relative;
+        padding: 172px 32px;
+    }
+}
+
+h1 {
+    font-family: 'Baloo 2', Arial, Helvetica, sans-serif;
+    font-size: 48px;
+}
+
+h2 {
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    margin: 24px 0 12px 0;
+}
+
+h3, h4 {
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    margin: 12px 0 8px 0;
+}
+
+p {
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+}
+
+
+ul {
+    li {
+        margin: 12px 0 8px 0;
+    }
+}
+
+a {
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    &:hover {
+        text-decoration: underline;
+        color: $color-black;
+    }
+}
+
+.bubble {
+    position: absolute;
+    top: -64px;
+    left: -64px;
+    transform: scale(1.5);
+    transform-origin: top left;
+}
+
+@media (min-width: 768px) {
+    .wide-screen-container {
+        padding: 0 40px 120px 40px;
+    }
+}
+

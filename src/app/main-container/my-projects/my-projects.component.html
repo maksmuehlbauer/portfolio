@@ -18,8 +18,8 @@
     
     <div class="wide-screen-container">
         <div>
-            <h1>My work</h1>
-            <p>Feel free to try out my latest development projects and look into their code. </p>
+            <h1>{{ 'WORK.TITLE' | translate }}</h1>
+            <p>{{ 'WORK.STARTTEXT' | translate }}</p>
         </div>
     
         @for(singleProject of projectData.projectList; track singleProject.title; let index = $index) {

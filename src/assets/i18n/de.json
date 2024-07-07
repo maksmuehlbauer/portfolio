@@ -1,0 +1,50 @@
+{
+    "AOT": {
+        "NAME": "Hallo! Ich bin Max"
+    },
+    "HEADER": {
+        "ABOUT": "Über mich",
+        "SKILL": "Fähigkeiten",
+        "WORKS": "Meine Arbeit",
+        "CONTACT": "Kontakt"
+    },
+    "DESCRIPTION": {
+        "TITLE": "Lass uns zusammen arbeiten",
+        "STARTTEXT": "Ich bin ein Frontend-Entwickler mit Sitz in Unna, Deutschland. Es macht mir Spaß, Designern und Unternehmen dabei zu helfen, ihre Ideen in die Tat umzusetzen. Ich freue mich darauf, meine Entwicklerkarriere mit einem Job als Junior-Webentwickler fortzusetzen.",
+        "ENDTEXT": "Wenn Sie denken, dass ich gut zu Ihren Projekten passe, kontaktieren Sie mich!",
+        "BUTTON": "Nachricht senden"
+    },
+    "SKILLS": {
+        "TITLE": "Fähigkeiten"
+    },
+    "WORK": {
+        "TITLE": "Meine Arbeit",
+        "STARTTEXT": "Probieren Sie gerne meine neuesten Entwicklungsprojekte aus und werfen Sie einen Blick in deren Code."
+    },
+    "SINGLEWORK": {
+        "DESCRIPTION": "DE TEST"
+    },
+    "CONTACT": {
+        "TITLE": "Kontakt",
+        "SECONDTITLE": "Gibt es ein Problem zu lösen?",
+        "TEXT": "Kontaktieren Sie mich über dieses Formular. Ich bin daran interessiert, von Ihnen zu hören, Ihre Ideen kennenzulernen und mit meiner Arbeit zu Ihren Projekten beizutragen.",        
+        "QUESTION": "Brauchen Sie einen Frontend-Entwickler?",
+        "ME": "Kontaktieren Sie mich!",
+        "YOURNAME": "Ihr Name",
+        "YOURMAIL": "Ihre E-Mail",
+        "YOURMSG": "Ihre Nachricht",
+        "NAMEERR": "Bitte geben Sie einen Namen mit mindestens 2 Zeichen ein",
+        "MAILERR": "Bitte geben Sie eine gültige E-Mail ein, Beispiel: mail&#64;mailer.com",
+        "MAILERRSEC": "E-Mail-Adresse ist erforderlich",
+        "MSGERR": "Bitte geben Sie eine Nachricht mit mindestens 10 Zeichen ein",
+        "MSGERRSEC": "Kurze Nachricht ist erforderlich",
+        "POLICYONE": "Ich habe die ",
+        "POLICYSEC": "Datenschutzrichtlinie",
+        "POLICYTHIRD": "gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu.",
+        "BUTTON": "Sag Hallo ;-)"
+    }
+
+
+
+
+}

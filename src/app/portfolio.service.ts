@@ -6,7 +6,9 @@ import { Injectable } from '@angular/core';
 })
 export class PortfolioService {
 
-  constructor() { }
+  constructor() {
+
+   }
 
   skillList = [
     { icon: 'ang.png', name: 'Angular' },
@@ -28,7 +30,7 @@ export class PortfolioService {
       img: './assets/img/my-projects/join.png',
       title: 'Join',
       languages: 'Angular | TypeScript | HTML | CSS',
-      description: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
+      descriptionen: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
       projecturl: 'https://max-muehlbauer.developerakademie.net/projects/join_group/index.html',
       githuburl: 'https://github.com/maksmuehlbauer/Join_Gruppenarbeit'
     },
@@ -37,7 +39,7 @@ export class PortfolioService {
       img: './assets/img/my-projects/elpolloloco.png',
       title: 'Pollo Loco',
       languages: 'JavaScript | HTML | CSS',
-      description: 'Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.',
+      descriptionen: 'Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.',
       projecturl: 'https://max-muehlbauer.developerakademie.net/projects/polloloco/index.html#',
       githuburl: 'https://github.com/maksmuehlbauer/el-pollo-loco'
     },
@@ -55,7 +57,7 @@ export class PortfolioService {
       img: './assets/img/my-projects/pokedex.png',
       title: 'Pokédex',
       languages: 'JavaScript | HTML | CSS | Api ',
-      description: 'Based on the PokéAPI a simple library that provides and catalogues pokemon information.',
+      descriptionen: 'Based on the PokéAPI a simple library that provides and catalogues pokemon information.',
       projecturl: 'https://max-muehlbauer.developerakademie.net/projects/pokedex/index.html',
       githuburl: 'https://github.com/maksmuehlbauer/Pokedex-v1'
     },

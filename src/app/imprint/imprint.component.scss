@@ -1,10 +1,17 @@
 @import './../../styles.scss';
 
+.wide-screen-container {
+    @include display();
+}
+
 section {
     @include display($ai: flex-start);
     flex-direction: column;
     padding: 172px 32px;
     color: $color-red;
+    max-width: 1440px;
+    position: relative;
+    // z-index: 6;
     a{
         text-decoration: none;
         color: $color-red;
@@ -39,16 +46,15 @@ h2{
 
 @media (min-width: 768px) {
     section {
-        padding: 200px 120px 0 40px;
+        padding: 172px 40px 120px 40px;
     }
 }
 
 @media (min-width: 1440px) {
     section {
-        padding: 200px 120px 0 100px;
         >.bubble {
             position: absolute;
-            top: -64px;
+            top: -94px;
             left: -56px;
             transform: scale(1.7);
             transform-origin: top left;
@@ -56,8 +62,8 @@ h2{
     }
 }
 
-@media (min-width: 1800px) {
-    section {
-        padding: 240px 280px 0 100px;
-    }
-}
+// @media (min-width: 1800px) {
+//     section {
+//         padding: 240px 280px 0 100px;
+//     }
+// }

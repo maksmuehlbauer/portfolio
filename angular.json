@@ -34,6 +34,7 @@
               "src/styles.scss"
             ],
             "scripts": []
+            
           },
           "configurations": {
             "production": {
@@ -51,6 +52,7 @@
               ],
               "outputHashing": "all"
             },
+            "de": {"localize": ["de"]},
             "development": {
               "optimization": false,
               "extractLicenses": false,

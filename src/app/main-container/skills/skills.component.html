@@ -1,6 +1,6 @@
 <div class="wide-screen-container">
     <section>
-        <h1>Skill set</h1>
+        <h1>{{ 'SKILLS.TITLE' | translate}}</h1>
         <div class="logo-container">
             <div *ngFor="let skill of skillsData.skillList; let index = index; let last = last" [ngClass]="{'last-element-class': last}" class="skill-container">
                 

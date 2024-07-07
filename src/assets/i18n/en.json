@@ -1,0 +1,48 @@
+{
+    "AOT": {
+        "NAME": "Hello! I am Max"
+    },
+    "HEADER": {
+        "ABOUT": "About me",
+        "SKILL": "Skill set",
+        "WORKS": "My work",
+        "CONTACT": "Contact"
+    },
+    "DESCRIPTION": {
+        "TITLE": "Let's work together",
+        "STARTTEXT": "I am a Front-end developer based in Unna, Germany. I enjoy helping designers and companies bring their ideas into real life. I am looking forward to continuing my developer career with a job in a junior web developer position.",
+        "ENDTEXT": "If you think I’d be a good match for your projects, contact me!",
+        "BUTTON": "Send a message"
+    },
+    "SKILLS": {
+        "TITLE": "SKill set"
+    },
+    "WORK": {
+        "TITLE": "My work",
+        "STARTTEXT": "Feel free to try out my latest development projects and look into their code."
+    },
+    "SINGLEWORK": {
+        "DESCRIPTION": "EN TEST"
+    },
+    "CONTACT": {
+        "TITLE": "Contact",
+        "SECONDTITLE": "Got a problem to solve?",
+        "TEXT": "Contact me through this form, I am interested in hearing from you, knowing your ideas and contributing to your projects with my work.",
+        "QUESTION": "Need a Frontend developer?",
+        "ME": "Contact me!",
+        "YOURNAME": "Your name",
+        "YOURMAIL": "Your mail",
+        "YOURMSG": "Your message",
+        "NAMEERR": "please enter a name with a minimum of 2 characters",
+        "MAILERR": "please enter a valid email, example: mail&#64;mailer.com",
+        "MAILERRSEC": "Mail Adress is required",
+        "MSGERR": "please enter a message with at least 10 characters",
+        "MSGERRSEC": "short message is required",
+        "POLICYONE": "I've read the ",
+        "POLICYSEC": "privacy policy",
+        "POLICYTHIRD": "and agree to the processing of my data as outlined.",
+        "BUTTON": "Say hello ;-)"
+    }
+
+
+}

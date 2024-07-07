@@ -6,10 +6,10 @@
         </div>
         <div class="menu-points">
             <div>
-                <a href="#about-me" (click)="toggleSideMenu()">About me</a>
-                <a href="#skills" (click)="toggleSideMenu()">Skill set</a>
-                <a href="#my-projects" (click)="toggleSideMenu()">My work</a>
-                <a href="#contact" (click)="toggleSideMenu()">Contact</a>
+                <a href="#about-me" (click)="toggleSideMenu()">{{ 'HEADER.ABOUT' | translate}}</a>
+                <a href="#skills" (click)="toggleSideMenu()">{{ 'HEADER.SKILL' | translate}}</a>
+                <a href="#my-projects" (click)="toggleSideMenu()">{{ 'HEADER.WORKS' | translate}}</a>
+                <a href="#contact" (click)="toggleSideMenu()">{{ 'HEADER.CONTACT' | translate}}</a>
             </div>
         </div>
     </div>
@@ -21,9 +21,9 @@
         <img class="hide-btn" src="./assets/img/top-aot/burger-menu.png" alt="burger menu" (click)="toggleSideMenu()" [class.d-none]="openMenu">
         <div class="desktop-menu-points">
             <div>
-                <a href="#about-me">About me</a>
-                <a href="#skills">Skill set</a>
-                <a href="#my-projects">My work</a>
+                <a href="#about-me">{{ 'HEADER.ABOUT' | translate}}</a>
+                <a href="#skills">{{ 'HEADER.SKILL' | translate}}</a>
+                <a href="#my-projects">{{ 'HEADER.WORKS' | translate}}</a>
             </div>
         </div>
     </section>

@@ -1,20 +1,20 @@
 <div class="wide-screen-container">
     <section>
         <div class="text-container">
-            <h1>Contact </h1>
-            <h2>Got a problem to solve?</h2>
-            <p>Contact me through this form, I am interested in hearing from you, knowing your ideas and contributing to your projects with my work.</p>
-            <span>Need a Frontend developer? <span>Contact me!</span></span>
+            <h1>{{ 'CONTACT.TITLE' | translate }}</h1>
+            <h2>{{ 'CONTACT.SECONDTITLE' | translate }}</h2>
+            <p>{{ 'CONTACT.TEXT' | translate }}</p>
+            <span>{{ 'CONTACT.QUESTION' | translate }} <span>{{ 'CONTACT.ME' | translate }}</span></span>
         </div>
         <div class="form-container" (keyup)="checkAllFields()">
             <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
                 <div class="input-container">
                     <input #name="ngModel" [(ngModel)]="contactData.name" name="username" type="text" id="name" placeholder="" required>
-                    <label for="name">Your name</label>
+                    <label for="name">{{ 'CONTACT.YOURNAME' | translate }}</label>
                     @if (name.dirty) {
                         @if (contactData.name.length <= 1) {
                             <img src="./assets/img/contact/error.png" alt="">
-                            <p>please enter a name with a minimum of 2 characters</p>
+                            <p>{{ 'CONTACT.NAMEERR' | translate }}</p>
                         }@else {
                             <img src="./assets/img/contact/done.png" alt="">
                         }
@@ -23,30 +23,30 @@
     
                 <div class="input-container" (keyup)="checkAllFields()">
                     <input #mail="ngModel" [(ngModel)]="contactData.email" name="usermail" type="email" id="mail" placeholder="" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
-                    <label for="mail">Your email</label>
+                    <label for="mail">{{ 'CONTACT.YOURMAIL' | translate }}</label>
                     @if (mail.dirty) {
                         @if (mail.errors?.['pattern']) {
                             <img src="./assets/img/contact/error.png" alt="">
-                            <p>please enter a valid email, example: mail&#64;mailer.com</p>
+                            <p>{{ 'CONTACT.MAILERR' | translate }}</p>
                         }@else if (contactData.email.length > 0) {
                             <img src="./assets/img/contact/done.png" alt="">
                         }@else if (mail.errors?.['required']) {
-                            <p>Mail Adress is required</p>
+                            <p>{{ 'CONTACT.MAILERRSEC' | translate }}</p>
                         }
                     }
                 </div>
     
                 <div class="input-container" (keyup)="checkAllFields()">
                     <textarea #message="ngModel" [(ngModel)]="contactData.message" minlength="10" name="usermessage" type="text" id="text" placeholder="" required></textarea>
-                    <label for="text">Your message</label>
+                    <label for="text">{{ 'CONTACT.YOURMSG' | translate }}</label>
                     @if (message.dirty) {
                         @if (message.errors?.['minlength']) {
                             <img src="./assets/img/contact/error.png" alt="">
-                            <p>please enter a message with at least 10 characters</p>
+                            <p>{{ 'CONTACT.MSGERR' | translate }}</p>
                         }@else if (contactData.message.length > 0) {
                             <img src="./assets/img/contact/done.png" alt="">
                         }@else if (message.errors?.['required']) {
-                            <p>short message is required</p>
+                            <p>{{ 'CONTACT.MSGERRSEC' | translate }}</p>
                         }
                     }
                     
@@ -59,9 +59,9 @@
                         <input type="checkbox" id="checkbox" class="checkbox">
                         <label for="checkbox"></label>
                     </div>
-                    <span>I've read the <span>privacy policy</span> and agree to the processing of my data as outlined.</span>
+                    <span>{{ 'CONTACT.POLICYONE' | translate }}<a href="privacypolicy">{{ 'CONTACT.POLICYSEC' | translate }}</a> {{ 'CONTACT.POLICYTHIRD' | translate }}</span>
                 </div>
-                   <button [ngClass]="btnState()" (click)="clearForm()" class="m-bot desk-m-top" [disabled]="isDisabled">Say hello ;-)</button>
+                   <button [ngClass]="btnState()" (click)="clearForm()" class="m-bot desk-m-top" [disabled]="isDisabled">{{ 'CONTACT.BUTTON' | translate }}</button>
             </form>
             <a class="button-top" (click)="scrollToTop()"><img src="./assets/img/contact/to-top.png" alt=""></a>
         </div>
