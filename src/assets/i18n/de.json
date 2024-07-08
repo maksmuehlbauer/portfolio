@@ -41,7 +41,8 @@
         "POLICYONE": "Ich habe die ",
         "POLICYSEC": "Datenschutzrichtlinie",
         "POLICYTHIRD": "gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu.",
-        "BUTTON": "Sag Hallo ;-)"
+        "BUTTON": "Sag Hallo ;-)",
+        "PROJECTDESCRIPTION": "{{ description }}"
     }
 
 

@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
 import { TranslateService, TranslateLoader } from '@ngx-translate/core';
 import { CustomTranslateService } from '../../../translate.service';
+// import { PortfolioService } from '../../../portfolio.service';
 
 @Component({
   selector: 'app-single-project',
@@ -13,14 +14,25 @@ import { CustomTranslateService } from '../../../translate.service';
 })
 export class SingleProjectComponent implements OnInit {
 
-  // language = inject(TranslateService)
+  // projects: Object[] = []
   currentLanguage: string = '';
 
-  constructor(private customTranslateService: CustomTranslateService) {}
+  constructor(
+    // private portfolioService: PortfolioService, //portfolio.service.ts
+
+    private customTranslateService: CustomTranslateService, //translate.service.ts
+    private translateService: TranslateService // from '@ngx-translate/core';  => Modul
+  ) {}
 
   ngOnInit() {
+    // this.projects = this.portfolioService.projectList
     this.currentLanguage = this.customTranslateService.getCurrentLanguage();
 
+    // abonniert das onLangChange Event und sendet ein Signal immer wenn die Sprache geändert wird.
+    // Ein Observable vom Translateservice
+    this.translateService.onLangChange.subscribe(event => {
+      this.currentLanguage = event.lang;
+    });
   }
 
 
@@ -30,6 +42,7 @@ export class SingleProjectComponent implements OnInit {
     title: 'GG',
     languages: 'Angular | TypeScript | HTML | CSS | Firebase',
     descriptionen: 'EN-Text',
+    descriptionde: 'DE-Text',
     projecturl: 'www.google.de',
     githuburl: 'www.wikipedia.de'
   }
@@ -37,6 +50,10 @@ export class SingleProjectComponent implements OnInit {
 
   textDirection(index: number): string {
     return index % 2 === 0 ? 'text-content-left' : 'text-content-right';
+  }
+
+  getProjectDescription(project: any) {
+    return this.currentLanguage === 'en' ? project.descriptionen : project.descriptionde;
   }
 
 }

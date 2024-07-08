@@ -41,7 +41,8 @@
         "POLICYONE": "I've read the ",
         "POLICYSEC": "privacy policy",
         "POLICYTHIRD": "and agree to the processing of my data as outlined.",
-        "BUTTON": "Say hello ;-)"
+        "BUTTON": "Say hello ;-)",
+        "PROJECTDESCRIPTION": "{{description}}"
     }
 
 

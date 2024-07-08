@@ -31,6 +31,7 @@ export class PortfolioService {
       title: 'Join',
       languages: 'Angular | TypeScript | HTML | CSS',
       descriptionen: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
+      descriptionde: '„Aufgabenmanager inspiriert vom Kanban-System. Aufgaben mit Drag-and-Drop-Funktionen erstellen und organisieren, Benutzer und Kategorien zuweisen.',
       projecturl: 'https://max-muehlbauer.developerakademie.net/projects/join_group/index.html',
       githuburl: 'https://github.com/maksmuehlbauer/Join_Gruppenarbeit'
     },
@@ -40,6 +41,7 @@ export class PortfolioService {
       title: 'Pollo Loco',
       languages: 'JavaScript | HTML | CSS',
       descriptionen: 'Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.',
+      descriptionde: 'Spring-, Lauf- und Wurfspiel mit objektorientiertem Ansatz. Hilf Pepe, Münzen und Tabasco-Salsa zu finden, um gegen die verrückte Henne zu kämpfen.',
       projecturl: 'https://max-muehlbauer.developerakademie.net/projects/polloloco/index.html#',
       githuburl: 'https://github.com/maksmuehlbauer/el-pollo-loco'
     },
@@ -58,6 +60,7 @@ export class PortfolioService {
       title: 'Pokédex',
       languages: 'JavaScript | HTML | CSS | Api ',
       descriptionen: 'Based on the PokéAPI a simple library that provides and catalogues pokemon information.',
+      descriptionde: 'Basierend auf der PokéAPI, einer einfachen Bibliothek, die Informationen zu Pokémon bereitstellt und katalogisiert.',
       projecturl: 'https://max-muehlbauer.developerakademie.net/projects/pokedex/index.html',
       githuburl: 'https://github.com/maksmuehlbauer/Pokedex-v1'
     },
