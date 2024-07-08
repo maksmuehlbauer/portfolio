@@ -29,7 +29,8 @@ export class SingleProjectComponent implements OnInit {
     this.currentLanguage = this.customTranslateService.getCurrentLanguage();
 
     // abonniert das onLangChange Event und sendet ein Signal immer wenn die Sprache geändert wird.
-    // Ein Observable vom Translateservice
+    // Ein Observable vom Translateservice 
+    // Überrägt das Signal vom lang change vom Child zum Parent Element
     this.translateService.onLangChange.subscribe(event => {
       this.currentLanguage = event.lang;
     });
