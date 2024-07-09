@@ -16,7 +16,6 @@ export class CustomTranslateService {
   }
 
   switchLanguage(language: string) {
-    console.log(language)
     this.translate.use(language);
   }
 

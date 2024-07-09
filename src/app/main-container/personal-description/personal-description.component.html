@@ -1,8 +1,9 @@
 <div class="wide-screen-container">
-    <section>
+    <section >
         <img class="small-bubble" src="./assets/img/personall-description/bubble-6-small.png" alt="background-red-bubble">
-        <h1>{{ 'DESCRIPTION.TITLE' | translate}}</h1>
-        <div>
+        <h1 [@fadeInFromLeft]="isVisible ? 'visible' : 'void'" class="fade-in-section">{{ 'DESCRIPTION.TITLE' | translate}}</h1>
+        <!-- <h1>{{ 'DESCRIPTION.TITLE' | translate}}</h1> -->
+        <div [@fadeInFromRight]="isVisible ? 'visible' : 'void'" class="fade-in-section">
             <p>
                 {{ 'DESCRIPTION.STARTTEXT' | translate}}
                 <br><br>

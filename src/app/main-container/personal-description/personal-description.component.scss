@@ -2,14 +2,26 @@
 
 .wide-screen-container {
     @include display();
-    
+    overflow: hidden;
 }
+
+.fade-in-section {
+    opacity: 0;
+    transition: opacity 2s ease-in-out; // Animation für 2 Sekunden definieren
+  }
+  
+  .fade-in-section.visible {
+    opacity: 1;
+  }
+
+
 
 section {
     @include display();
     flex-direction: column;
     position: relative;
     max-width: 1440px;
+
     .small-bubble {
         position: absolute;
         top: 42px;

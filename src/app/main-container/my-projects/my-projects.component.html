@@ -23,7 +23,11 @@
         </div>
     
         @for(singleProject of projectData.projectList; track singleProject.title; let index = $index) {
-            <app-single-project [project]="singleProject" id="{{ index }}" [ngClass]="getDirection(index)" class="single-project-section"></app-single-project>
+            <app-single-project #animatedElements [@fadeIn]="isVisible ? 'visible' : 'void'" [project]="singleProject" 
+            id="{{ index }}" 
+            [ngClass]="getDirection(index)"
+            
+            class="single-project-section"></app-single-project>
         }
     </div>
 

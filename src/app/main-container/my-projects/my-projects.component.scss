@@ -5,6 +5,7 @@
     flex-direction: column;
 }
 
+
 .wide-screen-container {
     @include display();
     flex-direction: column;
@@ -85,15 +86,26 @@ section {
     }
 
     .bg-row {
-        // background-color: yellow;
         display: flex;
         flex-direction: row;
         gap: 88px;
+        opacity: 1;
+        // animation: swipein 4s;
+    }
 
+    // @media (prefers-reduced-motion: no-preference) {
+    //     .bg-row-animation {
+    //         animation: swipein 4s;
+    //     }
+    // }
+
+
+    @keyframes swipein {
+        0% { opacity: 0; background-color: blue;}
+        100% { opacity: 1; background-color: yellow;}
     }
 
     .bg-row-reverse {
-        // background-color: red;
         display: flex;
         flex-direction: row-reverse;
         align-items: start;
