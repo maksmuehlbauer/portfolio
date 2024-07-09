@@ -50,7 +50,7 @@ section {
 
 @media (min-width: 1440px) {
     .wide-screen-container {
-
+        max-width: 1440px;
         >div {
             align-self: flex-start;
             max-width: 1440px;
@@ -93,17 +93,7 @@ section {
         // animation: swipein 4s;
     }
 
-    // @media (prefers-reduced-motion: no-preference) {
-    //     .bg-row-animation {
-    //         animation: swipein 4s;
-    //     }
-    // }
 
-
-    @keyframes swipein {
-        0% { opacity: 0; background-color: blue;}
-        100% { opacity: 1; background-color: yellow;}
-    }
 
     .bg-row-reverse {
         display: flex;

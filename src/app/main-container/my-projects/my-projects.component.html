@@ -7,7 +7,7 @@
     <!-- <img src="./assets/img/my-projects/bubble-6.png" class="bubbles" [ngStyle]="{top: '2481px', right: '25px', 'z-index': '1'}" alt="" > -->
     <!-- <img src="./assets/img/my-projects/bubble-7.png" class="bubbles" [ngStyle]="{top: '3141px', right: '30px'}" alt="" > -->
 
-    <img src="./assets/img/my-projects/desk-bubble-1.png" class="desk-bubbles" [ngStyle]="{top: '50px', left: '744px'}" alt="" >
+    <img src="./assets/img/my-projects/desk-bubble-1.png" class="desk-bubbles" [ngStyle]="{top: '25px', right: '830px'}" alt="" >
     <img src="./assets/img/my-projects/desk-bubble-2.png" class="desk-bubbles" [ngStyle]="{top: '100px', right: '100px'}" alt="" >
     <img src="./assets/img/my-projects/desk-bubble-3.png" class="desk-bubbles" [ngStyle]="{top: '577px', left: '-100px'}" alt="" >
     <img src="./assets/img/my-projects/desk-bubble-4.png" class="desk-bubbles" [ngStyle]="{top: '862px', right: '-100px'}" alt="" >
@@ -23,7 +23,7 @@
         </div>
     
         @for(singleProject of projectData.projectList; track singleProject.title; let index = $index) {
-            <app-single-project #animatedElements [@fadeIn]="isVisible ? 'visible' : 'void'" [project]="singleProject" 
+            <app-single-project [project]="singleProject" 
             id="{{ index }}" 
             [ngClass]="getDirection(index)"
             
