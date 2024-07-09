@@ -31,7 +31,7 @@ export class PortfolioService {
       title: 'Join',
       languages: 'Angular | TypeScript | HTML | CSS',
       descriptionen: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
-      descriptionde: '„Aufgabenmanager inspiriert vom Kanban-System. Aufgaben mit Drag-and-Drop-Funktionen erstellen und organisieren, Benutzer und Kategorien zuweisen.',
+      descriptionde: 'Aufgabenmanager inspiriert vom Kanban-System. Aufgaben mit Drag-and-Drop-Funktionen erstellen und organisieren, Benutzer und Kategorien zuweisen.',
       projecturl: 'https://max-muehlbauer.developerakademie.net/projects/join_group/index.html',
       githuburl: 'https://github.com/maksmuehlbauer/Join_Gruppenarbeit'
     },

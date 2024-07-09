@@ -1,7 +1,7 @@
 <div class="hidden-container">
     <div class="menu" [class.show-menu]="openMenu">
         <div class="sidebar-nav">
-            <img src="./assets/img/top-aot/logo-menu-red.png" alt="logo">
+            <a href="index"><img src="./assets/img/top-aot/logo-menu-red.png" alt="logo"></a>
             <img src="./assets/img/top-aot/burger-menu.png" alt="burger menu" (click)="toggleSideMenu()">
         </div>
         <div class="menu-points">
@@ -10,22 +10,37 @@
                 <a href="#skills" (click)="toggleSideMenu()">{{ 'HEADER.SKILL' | translate}}</a>
                 <a href="#my-projects" (click)="toggleSideMenu()">{{ 'HEADER.WORKS' | translate}}</a>
                 <a href="#contact" (click)="toggleSideMenu()">{{ 'HEADER.CONTACT' | translate}}</a>
+                <div class="lang-container">
+                    <button (click)="switchLanguage('en')" class="btn-lang">en</button>
+                    <div class="pipe"></div>
+                    <button (click)="switchLanguage('de')" class="btn-lang">de</button>
+                </div>
             </div>
+
         </div>
     </div>
 
 </div>
+
 <div class="wide-screen-container">
+
     <section [class.d-none]="openMenu">
-        <img src="./assets/img/top-aot/logo.png" alt="logo" [class.d-none]="openMenu">
+
+        <a href="index"><img src="./assets/img/top-aot/logo.png" alt="logo" [class.d-none]="openMenu"></a>
         <img class="hide-btn" src="./assets/img/top-aot/burger-menu.png" alt="burger menu" (click)="toggleSideMenu()" [class.d-none]="openMenu">
         <div class="desktop-menu-points">
             <div>
                 <a href="#about-me">{{ 'HEADER.ABOUT' | translate}}</a>
                 <a href="#skills">{{ 'HEADER.SKILL' | translate}}</a>
                 <a href="#my-projects">{{ 'HEADER.WORKS' | translate}}</a>
+
             </div>
         </div>
+        <div class="lang-container-desktop">
+            <button (click)="switchDesktopLanguage()" class="btn-lang">{{ currentLanguage }}</button>
+    </div>
+
     </section>
 </div>
+
 

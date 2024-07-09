@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
+import { CustomTranslateService } from '../../../translate.service';
 
 
 @Component({
@@ -13,6 +14,23 @@ export class HeaderComponent {
 
   openMenu: boolean = false;
   scrollEnabled: boolean = true;
+  currentLanguage: string = 'en'; // Startsprache, hier 'en'
+
+  constructor(private customTranslateService: CustomTranslateService) {}
+
+  switchLanguage(language: string) {
+    this.customTranslateService.switchLanguage(language);
+  }
+
+
+  switchDesktopLanguage() {
+    if (this.currentLanguage === 'en') {
+      this.currentLanguage = 'de';
+    } else {
+      this.currentLanguage = 'en';
+    }
+    this.customTranslateService.switchLanguage(this.currentLanguage);
+  }
 
   toggleSideMenu() {
     if(!this.openMenu) {
@@ -34,5 +52,7 @@ export class HeaderComponent {
         this.scrollEnabled = true;
     }
 }
+
+
 
 }

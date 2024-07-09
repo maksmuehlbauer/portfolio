@@ -15,37 +15,38 @@
     }
 }
 
-h1 {
+::ng-deep h1 {
     font-family: 'Baloo 2', Arial, Helvetica, sans-serif;
-    font-size: 48px;
+    font-size: 32px;
 }
 
-h2 {
+::ng-deep h2 {
     font-family: 'Montserrat', Arial, Helvetica, sans-serif;
     font-weight: 600;
     font-size: 24px;
     margin: 24px 0 12px 0;
 }
 
-h3, h4 {
+::ng-deep h3, ::ng-deep h4 {
     font-family: 'Montserrat', Arial, Helvetica, sans-serif;
     font-weight: 400;
     font-size: 16px;
     margin: 12px 0 8px 0;
 }
 
-p {
+::ng-deep p {
     font-family: 'Montserrat', Arial, Helvetica, sans-serif;
 }
 
 
-ul {
+::ng-deep ul {
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
     li {
         margin: 12px 0 8px 0;
     }
 }
 
-a {
+::ng-deep a {
     font-family: 'Montserrat', Arial, Helvetica, sans-serif;
     text-decoration: none;
     &:hover {
@@ -62,9 +63,16 @@ a {
     transform-origin: top left;
 }
 
+
 @media (min-width: 768px) {
     .wide-screen-container {
         padding: 0 40px 120px 40px;
+    }
+}
+
+@media (min-width: 1440px) {
+    ::ng-deep h1 {
+        font-size: 48px;
     }
 }
 
